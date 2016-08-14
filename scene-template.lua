@@ -5,7 +5,7 @@
 local composer = require("composer")
 local scene = composer.newScene()
 
--- forward declarations and local vars
+-- forward declarations, local vars, local functions
 
 --
 -- Scene events
