@@ -5,14 +5,22 @@
 local composer = require("composer")
 local scene = composer.newScene()
 
+-- forward declarations and local vars
+
 --
 -- Scene events
 --
 
--- Runs at scene creation before screen visible
+-- Runs ONCE at scene creation before visible
 function scene:create(event)
 
   local sceneGroup = self.view
+
+  -- pause physics
+  -- define display objects
+  -- insert objects into scene view
+  -- load scene specific audio
+  -- touch/tap handlers
 
 end
 
@@ -24,7 +32,16 @@ function scene:show(event)
   local phase = event.phase
 
   if (phase == "will") then
+
+    -- position elements
+
   elseif (phase == "did") then
+
+    -- timers, transitions, animations
+    -- start physics
+    -- play scene specific audio
+    -- Runtime event listeners (enterFrame, etc)
+
   end
 
 end
@@ -37,7 +54,16 @@ function scene:hide(event)
   local phase = event.phase
 
   if (phase == "will") then
+
+    -- remove native UI objects
+    -- remove Runtime listeners (enterFrame, etc)
+    -- pause physics
+    -- stop audio
+
   elseif (phase == "did") then
+
+    -- optional: force screen removal
+
   end
 
 end
@@ -46,6 +72,8 @@ end
 function scene:destroy(event)
 
   local sceneGroup = self.view
+
+  -- destroy scene specific audio
 
 end
 
