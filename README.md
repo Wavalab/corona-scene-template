@@ -1,2 +1,2 @@
 # corona-scene-template
-A snazzier template for corona devs.
+A snazzier scene template for corona devs.
