@@ -2,7 +2,6 @@
 -- Imports.
 --
 local composer = require("composer")
-local scene = composer.newScene()
 -- ...
 
 
@@ -10,6 +9,7 @@ local scene = composer.newScene()
 --
 -- Variables, globals, etc to execute only ONCE.
 --
+local scene = composer.newScene() -- create the scene
 -- ...
 
 
