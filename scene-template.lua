@@ -3,7 +3,6 @@
 --
 
 local composer = require("composer")
-local G = require("scripts.modules.g")
 -- require statements here
 
 
