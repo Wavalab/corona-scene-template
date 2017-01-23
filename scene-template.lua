@@ -1,22 +1,25 @@
 --
--- Imports.
+-- Scene Template
 --
+
 local composer = require("composer")
--- ...
+-- require statements here
 
 
 
 --
--- Variables, globals, etc to execute only ONCE.
+-- Variables, init, etc; Executes ONCE
 --
+
 local scene = composer.newScene() -- create the scene
 -- ...
 
 
 
 --
--- Runs ONCE at EACH scene creation before visible.
+-- Runs at EVERY scene creation before visible
 --
+
 function scene:create(event)
   local sceneGroup = self.view
   
@@ -32,8 +35,9 @@ end
 
 
 --
--- Runs before & after screen shows.
+-- Runs before & after screen shows
 --
+
 function scene:show(event)
   local sceneGroup = self.view
   local phase = event.phase
@@ -54,8 +58,9 @@ end
 
 
 --
--- Runs before & after screen hides.
+-- Runs before & after screen hides
 --
+
 function scene:hide(event)
   local sceneGroup = self.view
   local phase = event.phase
@@ -77,11 +82,12 @@ end
 
 
 --
--- Runs directly before scene removal.
+-- Runs directly before scene removal
 --
+
 function scene:destroy(event)
   local sceneGroup = self.view
-
+  
   -- destroy scene specific audio
   -- ...
 end
@@ -89,8 +95,9 @@ end
 
 
 --
--- End.
+-- End
 --
+
 scene:addEventListener("create", scene)
 scene:addEventListener("show", scene)
 scene:addEventListener("hide", scene)
