@@ -1,28 +1,17 @@
---
--- Scene Template
---
-
 local composer = require("composer")
--- require statements here
+-- load dependencies
 
 
 
---
--- Variables, init, etc; Executes ONCE
---
-
+-- Variables, init, etc. Executes ONCE!
 local scene = composer.newScene() -- create the scene
 -- ...
 
 
 
---
 -- Runs at EVERY scene creation before visible
---
-
 function scene:create(event)
   local sceneGroup = self.view
-
   -- define groups
   -- pause physics if started
   -- define display objects
@@ -34,17 +23,12 @@ end
 
 
 
---
 -- Runs before & after screen shows
---
-
 function scene:show(event)
   local sceneGroup, phase = self.view, event.phase
-
   if (phase == "will") then
     -- position elements
     -- ...
-
   elseif (phase == "did") then
     -- timers, transitions, animations
     -- start physics
@@ -56,13 +40,9 @@ end
 
 
 
---
 -- Runs before & after screen hides
---
-
 function scene:hide(event)
   local sceneGroup, phase = self.view, event.phase
-
   if (phase == "will") then
     -- remove native UI objects
     -- remove Runtime listeners (enterFrame, etc)
@@ -70,7 +50,6 @@ function scene:hide(event)
     -- stop audio
     -- stop timers
     -- ...
-
   elseif (phase == "did") then
     -- optional: force screen removal
     -- ...
@@ -79,23 +58,16 @@ end
 
 
 
---
 -- Runs directly before scene removal
---
-
 function scene:destroy(event)
   local sceneGroup = self.view
-
   -- destroy scene specific audio
   -- ...
 end
 
 
 
---
 -- End
---
-
 scene:addEventListener("create", scene)
 scene:addEventListener("show", scene)
 scene:addEventListener("hide", scene)
