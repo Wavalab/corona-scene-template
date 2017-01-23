@@ -3,6 +3,7 @@
 --
 
 local composer = require("composer")
+local G = require("scripts.modules.g")
 -- require statements here
 
 
@@ -22,7 +23,7 @@ local scene = composer.newScene() -- create the scene
 
 function scene:create(event)
   local sceneGroup = self.view
-  
+
   -- define groups
   -- pause physics if started
   -- define display objects
@@ -39,8 +40,7 @@ end
 --
 
 function scene:show(event)
-  local sceneGroup = self.view
-  local phase = event.phase
+  local sceneGroup, phase = self.view, event.phase
 
   if (phase == "will") then
     -- position elements
@@ -62,8 +62,7 @@ end
 --
 
 function scene:hide(event)
-  local sceneGroup = self.view
-  local phase = event.phase
+  local sceneGroup, phase = self.view, event.phase
 
   if (phase == "will") then
     -- remove native UI objects
@@ -87,7 +86,7 @@ end
 
 function scene:destroy(event)
   local sceneGroup = self.view
-  
+
   -- destroy scene specific audio
   -- ...
 end
